@@ -31,8 +31,9 @@ class BackupDatabaseController extends ControllerBase {
 
     $rows = [];
     foreach ($results as $result) {
-      $url = backup_db_link($result->uri);
-      $location = Link::fromTextAndUrl($result->uri, Url::fromUri('base:/' . file_create_url($url)));
+      $uri = backup_db_link($result->uri);
+      $url = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+      $location = Link::fromTextAndUrl($result->uri, Url::fromUri('base:/' . $url));
       $created = \Drupal::service('date.formatter')
         ->format($result->created, 'html_date');
 

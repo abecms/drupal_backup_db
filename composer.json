@@ -1,5 +1,5 @@
 {
-    "name": "drupal/backup_db",
+    "name": "abecms/backup_db",
     "type": "drupal-module",
     "description": "Provides database backup solutions via Drupal.",
     "homepage": "https://drupal.org/project/backup_db",
@@ -9,6 +9,11 @@
             "name": "George Anderson (geoanders)",
             "homepage": "https://www.drupal.org/u/geoanders",
             "role": "Maintainer"
+        },
+        {
+            "name": "Gregory Besson (gregorybesson)",
+            "homepage": "https://www.drupal.org/u/gregorybesson",
+            "role": "Patcher"
         }
     ],
     "require": {
